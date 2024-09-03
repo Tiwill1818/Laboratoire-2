@@ -7,52 +7,111 @@
  * @brief Menu du jour
 -->
 <html lang="fr">
-    <head>
-        <title>Menu du jour</title>
-        <link rel="stylesheet" href="./style.css">
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <h1><span class="premiere">M</span>enu du jour</h1>
-        <ol>
-            <li>Choix d'entrées
-                <ul>
-                    <li><a href="https://i.pinimg.com/736x/62/6f/f9/626ff9a587268fc72d3f4189b99fa3be.jpg">Salade du chef</a></li>
-                    <li>Soupe de légumes</li>
-                    <li>Bouchées surprises</li>
-                </ul>
+
+<head>
+    <title>Pub Shronion</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="raphael.min.js"></script>
+    <script type="text/javascript" src="justgage.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Pub Shronion</h1>
+    </header>
+    <style>
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+    </style>
+    <nav class="navbar navbar-expand-md bg-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="accueil.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="page2.html" id="navbardrop">Recettes</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="page2.html#recette1">Lien 1</a>
+                    <a class="dropdown-item" href="page2.html#recette2">Lien 2</a>
+                </div>
             </li>
-            <li id="caca">Plats principaux
-                <ul>
-                    <li><a href="page2.html#recette1">Volaille de nos prairies</a></li>
-                    <li>Pêche du jour</li>
-                    <li>Bruschetta du jardin</li>
-                </ul>
-                
-            </li>
-            <li>Formages
-                <ul>
-                    <li>Assiette du pays</li>
-                </ul>
-            </li>
-            <li id="desserts">Desserts
-                <ul>
-                    <li>Profiteroles
-                        <a href="Profiteroles-1-of-1.jpg">
-                            <img src="Profiteroles-1-of-1.jpg" width="30" height="30" alt="Photo de Profiteroles" title="Cliquez pour agrandir">
-                        </a>
-                    </li>
-                    <li>Délices aux agrumes</li>
-                    <li>Île flottante</li>
-                    <li><a href="page2.html#recette2">Savoureux au chocolat</a></li>
-                </ul>
-            </li>
-        </ol>
-        <div>
-            <a href="https://reyesbarbecue.net/" title="Robinsons Galleria Ortigas Avenue QC, Level 1, Caniapiscau Regional County Municipality, Quebec G0G 2T0" target="_blank">Reyes Barbecue</a>
-        </div>
-        <div>
-            <a href="page2.html">Page 2</a>
-        </div>
-    </body>
+        </ul>
+    </nav>
+
+
+
+
+    <div class="container-fluid">
+        <section class="jumbotron">
+
+            <ol>
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <li>Choix d'entrées
+                            <ul>
+                                <li><a href="https://i.pinimg.com/736x/62/6f/f9/626ff9a587268fc72d3f4189b99fa3be.jpg">Salade
+                                        du
+                                        chef</a>
+                                </li>
+                                <li>Soupe de légumes</li>
+                                <li>Bouchées surprises</li>
+                            </ul>
+                        </li>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <li>Plats principaux
+                            <ul>
+                                <li><a href="page2.html#recette1">Volaille de nos prairies</a></li>
+                                <li>Pêche du jour</li>
+                                <li>Bruschetta du jardin</li>
+                            </ul>
+
+                        </li>
+
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-6">
+                        <li>Fromages
+                            <ul>
+                                <li>Assiette du pays</li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div class="col-md-6">
+                        <li>Desserts
+                            <ul>
+                                <li>Profiteroles
+                                    <a href="Profiteroles-1-of-1.jpg">
+                                        <img src="Profiteroles-1-of-1.jpg" width="30" height="30"
+                                            alt="Photo de Profiteroles" title="Cliquez pour agrandir">
+                                    </a>
+                                </li>
+                                <li>Délices aux agrumes</li>
+                                <li>Île flottante</li>
+                                <li><a href="page2.html#recette2">Savoureux au chocolat</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                </div>
+            </ol>
+        </section>
+    </div>
+
+    <div>
+        <a href="https://reyesbarbecue.net/"
+            title="Robinsons Galleria Ortigas Avenue QC, Level 1, Caniapiscau Regional County Municipality, Quebec G0G 2T0"
+            target="_blank">Reyes Barbecue</a>
+    </div>
+
+</body>
+
 </html>

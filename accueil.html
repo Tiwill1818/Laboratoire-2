@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--
+ * @file menu.html
+ * @author William Robert
+ * @version 1.00
+ * @date 2024/08/26
+ * @brief Menu du jour
+-->
+<html lang="fr">
+
+<head>
+    <title>Pub Shronion</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="raphael.min.js"></script>
+    <script type="text/javascript" src="justgage.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Pub Shronion</h1>
+    </header>
+    <style>
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+    </style>
+    <nav class="navbar navbar-expand-md bg-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="accueil.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="page2.html" id="navbardrop">Recettes</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="page2.html#recette1">Lien 1</a>
+                    <a class="dropdown-item" href="page2.html#recette2">Lien 2</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+
+    <div class="container-fluid">
+        <section class="jumbotron text-center">
+            <div id="gauge"></div>
+            <div class="btn-group">
+                <button id="btPlus" type="button" class="btn btn-primary">+</button>
+                <button id="btMoins" type="button" class="btn btn-primary">-</button>
+            </div>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped" style="width:40%"></div>
+            </div>
+            <div class="alert alert-danger"></div>
+        </section>
+    </div>
+    <div>
+        <a href="https://reyesbarbecue.net/" title="Adresse" data-toggle="popover" data-trigger="hover"
+            data-content="Robinsons Galleria Ortigas Avenue QC, Level 1, Caniapiscau Regional County Municipality, Quebec G0G 2T0"
+            target="_blank">Reyes Barbecue</a>
+
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
+    <script>
+        var gauge = new JustGage({
+            id: "gauge", // the id of the html element
+            value: 5,
+            min: 0,
+            max: 10,
+            decimals: 0,
+            gaugeWidthScale: 0.6
+        });
+
+        $(document).ready(function () {
+            $(".alert").hide();
+            $(".progress-bar").css("width", gauge.config.value * 10 + "%");
+        });
+
+        $("button#btPlus").click(function () {
+            if (gauge.config.value < 10) {
+                $(".alert").hide();
+                gauge.refresh(gauge.config.value + 1);
+                $(".progress-bar").css("width", gauge.config.value * 10 + "%");
+            }
+            else {
+                $(".alert").html("La valeur maximale est atteinte.").show();
+            }
+
+
+        });
+        $("button#btMoins").click(function () {
+            if (gauge.config.value > 0) {
+                $(".alert").hide();
+                gauge.refresh(gauge.config.value - 1);
+                $(".progress-bar").css("width", gauge.config.value * 10 + "%");
+            }
+            else {
+                $(".alert").html("La valeur minimale est atteinte.").show();
+            }
+
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -7,59 +7,147 @@
  * @brief Page 2 du site web
 -->
 <html lang="fr">
-    <head>
-        <title>Page 2</title>
-        <link rel="stylesheet" href="./style.css">
-        <meta charset="utf-8">
-    </head>
-    <body>
-        
-        <h2 id="recette1">Volaille de nos prairies</h2>
-        <section>
-            
-            <ul>
-                <li>Ingrédients
-                    <ul>
-                        <li>Poulet</li>
-                        <li>Herbes</li>
-                        <li>Légumes</li>
-                    </ul>
-                </li>
-                <li>Préparation
-                    <ol>
-                        <li>Faire cuire le poulet</li>
-                        <li>Ajouter les herbes et les légumes</li>
-                        <li>Servir chaud</li>
-                    </ol>
-                </li>
-            </ul>
-            
-        </section>
-        <section><img src="https://www.cuisineactuelle.fr/imgre/fit/~1~cac~2023~11~20~5fdf7cec-9844-407f-9c42-8975f8e6534f.jpeg/650x325/quality/80/crop-from/center/focus-point/771%2C1350/poulet-de-bresse-le-bon-choix-pour-vos-recettes-de-noel.jpeg" width="325" height="163" alt="Photo de volaille"></section>
 
-        
-        <h2 id="recette2">Savoureux au chocolat</h2>
-        <section>
-            <ul>
-                <li>Ingrédients
-                    <ul>
-                        <li>Chocolat</li>
-                        <li>Beurre</li>
-                        <li>Farine</li>
-                        <li>Sucre</li>
-                        <li>Oeufs</li>
-                    </ul>
-                </li>
-                <li>Préparation
-                    <ol>
-                        <li>Faire fondre le chocolat et le beurre</li>
-                        <li>Ajouter la farine, le sucre et les oeufs</li>
-                        <li>Mettre au four</li>
-                    </ol>
-                </li>
-            </ul>
+<head>
+    <title>Pub Shronion</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="raphael.min.js"></script>
+    <script type="text/javascript" src="justgage.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Pub Shronion</h1>
+    </header>
+    <style>
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+    </style>
+    <nav class="navbar navbar-expand-md bg-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="accueil.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="page2.html" id="navbardrop">Recettes</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="page2.html#recette1">Lien 1</a>
+                    <a class="dropdown-item" href="page2.html#recette2">Lien 2</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <h1 style="text-align: center;">Recettes</h1>
+
+    <div class="container-fluid">
+        <section id="recette1" class="jumbotron">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 style="text-align: center;">Volaille de nos prairies</h1>
+                    <img src="https://www.cuisineactuelle.fr/imgre/fit/~1~cac~2023~11~20~5fdf7cec-9844-407f-9c42-8975f8e6534f.jpeg/650x325/quality/80/crop-from/center/focus-point/771%2C1350/poulet-de-bresse-le-bon-choix-pour-vos-recettes-de-noel.jpeg"
+                        class="rounded-circle"
+                        style="display: block; margin-left: auto; margin-right: auto; width: 75%;"
+                        alt="Photo de volaille">
+                </div>
+                <div class="col-md-6">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Ingrédients</th>
+                                <th>Quantité</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Poulet</td>
+                                <td>1/2 tonnes</td>
+                            </tr>
+                            <tr>
+                                <td>Herbes</td>
+                                <td>1 feuille</td>
+                            </tr>
+                            <tr>
+                                <td>Légumes</td>
+                                <td>Tous</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    <div>
+                        <ul>
+                            <li>Préparation
+                                <ol>
+                                    <li>Faire cuire le poulet</li>
+                                    <li>Ajouter les herbes et les légumes</li>
+                                    <li>Servir chaud</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section><img src="./savoureux-au-chocolat--md-214951p336308.jpg" width="197" height="148" alt="Photo de savoureux"></section>
-        <div><a href="menu.html">Page 1</a></div>
-    </body>
+
+        <section id="recette2" class="jumbotron">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 style="text-align: center;">Savoureux au chocolat</h1>
+                    <img src="./savoureux-au-chocolat--md-214951p336308.jpg" class="rounded-circle"
+                        style="display: block; margin-left: auto; margin-right: auto; width: 75%;"
+                        alt="Photo de savoureux">
+                </div>
+                <div class="col-md-6">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Ingrédients</th>
+                                <th>Quantité</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Chocolat</td>
+                                <td>5 grammes</td>
+                            </tr>
+                            <tr>
+                                <td>Beurre</td>
+                                <td>1000 kilos</td>
+                            </tr>
+                            <tr>
+                                <td>Farine</td>
+                                <td>10 tasses</td>
+                            </tr>
+                            <tr>
+                                <td>Sucre</td>
+                                <td>5 barils</td>
+                            </tr>
+                            <tr>
+                                <td>Oeufs</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    <div>
+                        <ul>
+                            <li>Préparation
+                                <ol>
+                                    <li>Faire fondre le chocolat et le beurre</li>
+                                    <li>Ajouter la farine, le sucre et les oeufs</li>
+                                    <li>Mettre au four</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
 </html>

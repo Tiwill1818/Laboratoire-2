@@ -1,0 +1,53 @@
+/**
+ * @file style.css
+ * @author William Robert
+ * @version 1.00
+ * @date 2024/08/26
+ * @brief Fichier de style pour le site web de la pâtisserie Shronion
+ */
+
+
+body
+{
+    background-image: url("shronion.jpg");
+}
+
+span.premiere
+{
+    color: red;
+    font-size: 2em;
+}
+
+h1
+{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: fit-content; /* largeur (obligatoire) */
+    margin: auto;
+}
+
+
+h2
+{
+    width: fit-content; /* largeur (obligatoire) */
+    margin: auto;
+}
+
+#caca
+{
+    opacity: 0.8;
+}
+
+#desserts
+{
+    border: 3px solid blue;
+}
+ 
+h1:hover
+{
+    color: seagreen;
+}
+
+section
+{
+    display: inline-block;
+}
